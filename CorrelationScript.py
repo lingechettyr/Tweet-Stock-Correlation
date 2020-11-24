@@ -1,14 +1,9 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
 #Import relevant APIs
 import numpy as np
 import pandas as pd
 import tweepy as tw
 import matplotlib.pyplot as plt
 
-
-# %%
 #Twitter Authentication
 from tweepy import OAuthHandler
 from tweepy import API
@@ -22,8 +17,6 @@ auth = OAuthHandler(apiKey, apiSecret)
 auth.set_access_token(accessToken, accessSecret)
 api = API(auth)
 
-
-# %%
 #Searching and Storing
 
 
