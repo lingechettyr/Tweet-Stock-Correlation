@@ -16,8 +16,8 @@ count = 0
 tickers = ['TSLA', 'AAPL', 'FB'] #Took out cashtag symbol
 
 for tick in tickers:
-    while count < 100: #Change condition to see if we have reached the tweet pull limit
-        public_tweets += api.search(q = tick, count = 100, since = '2020-11-25', until = '2020-11-25')
+    while count < 10: #Change condition to see if we have reached the tweet pull limit
+        public_tweets += api.search(q = tick, count = 10, since = '2020-11-25', until = '2020-11-25')
         count += 1
     tweetsDict[tick] = count
     count = 0
