@@ -13,7 +13,7 @@ api = tweepy.API(auth, wait_on_rate_limit = True)
 public_tweets = []
 tweetsDict = {}
 count = 0
-tickers = ['$TSLA', '$AAPL', '$FB']
+tickers = ['TSLA', 'AAPL', 'FB'] #Took out cashtag symbol
 
 for tick in tickers:
     while count < 100: #Change condition to see if we have reached the tweet pull limit
