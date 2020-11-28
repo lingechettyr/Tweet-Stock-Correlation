@@ -48,17 +48,18 @@ count = 0
 counter = 0
 tweetCount = []
 maxID = 0
+tickers = ['$TSLA','$AAPL', '$FB']
 for tick in tickers:
-    while counter < 10: #Call search multiple times for each ticker
+    while counter < 10:
         if maxID > 0:
-            public_tweets = api.search(q = tick + '- filter:retweets', count = 10, since = start_date, until = end_date, max_id = maxID)
+            public_tweets = api.search(q = tick, count = 10, since = start_date, until = end_date, max_id = maxID)
         else:
-            public_tweets = api.search(q = tick + '- filter:retweets', count = 10, since = start_date, until = end_date) #First search
+            public_tweets = api.search(q = tick, count = 10, since = start_date, until = end_date)
         count += len(public_tweets)
-        maxID = public_tweets[len(public_tweets) - 1].id  #Set max_id to id from last tweet pulled from search function
+        maxID = public_tweets[len(public_tweets) - 1].id
         counter += 1
     tweetCount.append(count)
-    tweetsDict[tick] = count
+    tweetsDict[tick] = count - 9 #Account for replicate tweets from using maxID
     counter = 0
     count = 0
     maxID = 0
