@@ -45,14 +45,23 @@ elif int(days_prior) > 7 or int(days_prior) < 2:
 public_tweets = []
 tweetsDict = {}
 count = 0
+counter = 0
 tweetCount = []
+maxID = 0
 for tick in tickers:
-   # while count < 10:
-    public_tweets = api.search(q = tick + '- filter:retweets', count = 50, since = start_date, until = end_date)
-    count = len(public_tweets)
+    while counter < 10: #Call search multiple times for each ticker
+        if maxID > 0:
+            public_tweets = api.search(q = tick + '- filter:retweets', count = 10, since = start_date, until = end_date, max_id = maxID)
+        else:
+            public_tweets = api.search(q = tick + '- filter:retweets', count = 10, since = start_date, until = end_date) #First search
+        count += len(public_tweets)
+        maxID = public_tweets[len(public_tweets) - 1].id  #Set max_id to id from last tweet pulled from search function
+        counter += 1
     tweetCount.append(count)
     tweetsDict[tick] = count
-    #count = 0
+    counter = 0
+    count = 0
+    maxID = 0
 print (tweetsDict)
 
 x = np.array(perChange).reshape((-1,1))
