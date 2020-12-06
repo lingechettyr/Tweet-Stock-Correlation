@@ -1,6 +1,6 @@
 # Tweet Stock Correlation
 
-Displays the relationship between internet traffic of valuable companies and the change in their stock price over a specified time interval. Uses Twitter's restfulAPI in order to find historical data on the amount of tweets containing certain keywords. Also uses YFinanceAPI to pull historical data from different time periods. Python's Pandas library was prominently featured.
+Displays the relationship between the internet traffic (via Twitter) of the components of the Nasdaq-100 and the change in their stock price over a specified time interval. Uses Twitter's restfulAPI in order to find historical data on the amount of tweets containing cashtag of tickers. Also uses YFinanceAPI to pull historical data from different time periods. Python's Pandas library was prominently featured.
 
 ## Dependencies
 
