@@ -8,7 +8,7 @@ Displays the relationship between internet traffic of valuable companies and the
 Python Distribution: Python or Anaconda (recommended)
 YFinance
 Tweepy
-Jupyter Lab or Jupyter Notebook (included with Anaconda)
+Jupyter Lab or Jupyter Notebook (both included with Anaconda)
 ```
 
 ## Installing Dependencies
