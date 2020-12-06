@@ -48,3 +48,6 @@ SSH:
 ```bash
 git@github.com:sherloque-W/Tweet-Stock-Correlation.git
 ```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
