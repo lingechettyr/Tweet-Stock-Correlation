@@ -25,7 +25,7 @@ conda install -c ranaroussi yfinance
 ```
 
 ### Tweepy
-If using pip, enter in cmd prompt:
+If using pip, enter in terminal:
 ```bash 
 pip install tweepy
 ```
@@ -48,6 +48,23 @@ SSH:
 ```bash
 git@github.com:sherloque-W/Tweet-Stock-Correlation.git
 ```
+
+### Jupyter
+If you want to run the program using the Jupyter Notebook (recommended for inline plot) or JupyterLab, first launch either one of the following through the conda prompt:
+```bash
+jupter notebook
+```
+```bash 
+jupyter lab
+```
+Then, navigate to the cloned repo in your  local filesystem in either of the two environments and open the .ipynb file. To run the notebook, select "Run all cells" and follow the input prompts.
+
+### Terminal
+If you want to run the .py file, open a terminal in the src folder of the repo and type the following:
+```bash 
+python CorrelationScript_JL.py
+```
+If using the Anaconda distrubution, then run the above command in the conda prompt rather than the standard terminal. 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
