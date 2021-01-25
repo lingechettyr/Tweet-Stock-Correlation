@@ -52,7 +52,7 @@ git@github.com:sherloque-W/Tweet-Stock-Correlation.git
 ### Jupyter
 If you want to run the program using the Jupyter Notebook (recommended for inline plot) or JupyterLab, first launch either one of the following through the conda prompt:
 ```bash
-jupter notebook
+jupyter notebook
 ```
 ```bash 
 jupyter lab
